@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxMZP_NF7c_3FsxOhHXImKwg1kb-Pe_hwiQ&s">
+    <link rel="stylesheet" href="admin.css"> <!-- Link to the new admin.css -->
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Buttons in Top-Right Corner -->
+        <div class="top-buttons">
+            <button class="dashboard-button" onclick="redirectToDashboard()">Go to Dashboard</button>
+            <button class="activity-button" onclick="performActivity()">Activity</button>
+        </div>
+
+        <h2>📚 Admin Dashboard</h2>
+
+        <!-- Add Book Section -->
+        <div class="add-book">
+            <input type="text" id="bookTitle" placeholder="Book Title">
+            <input type="text" id="bookAuthor" placeholder="Author">
+            <input type="text" id="bookPublication" placeholder="Publication">
+            <input type="text" id="bookType" placeholder="Book Type">
+            <button onclick="addBook()">Add Book</button>
+        </div>
+
+        <!-- Book List -->
+        <div class="book-container" id="bookList">
+            <!-- Books will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to redirect to the dashboard
+        function redirectToDashboard() {
+            window.location.href = "dashboard.html"; // Redirect to dashboard
+        }
+
+        // Function to perform an activity
+        function performActivity() {
+            alert("Activity performed!"); // Example: Display a message
+            // You can replace this with any other activity (e.g., logging, API call, etc.)
+        }
+    </script>
+</body>
+</html>

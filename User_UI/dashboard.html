@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/8074/8074804.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>📚 Library Dashboard</h1>
+        <input type="text" id="searchBook" placeholder="Search books..." onkeyup="searchBooks()">
+        <a href="admin.html" class="admin-login">Admin Login</a>
+    </div>
+
+    <div class="book-container" id="bookList">
+        <p>Loading books...</p>
+    </div>
+
+    <!-- Issue Book Popup -->
+    <div id="issuePopup" class="popup">
+        <div class="popup-content">
+            <button class="cancel-btn" onclick="closeIssuePopup()" style="position: absolute; top: 10px; left: 125px;margin-top: -31px; background: none; border: none; font-size: 20px; cursor: pointer; color: black;">❌</button>
+            <h2>Issue Book</h2>
+            <p><strong>Book:</strong> <span id="popupBookTitle"></span></p>
+            <input type="text" id="userName" placeholder="Your Name">
+            <input type="text" id="mobileNumber" placeholder="Mobile Number">
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <button onclick="issueBook()">Issue</button>
+        </div>
+    </div>
+
+    <!-- Guest Register Popup -->
+    <div id="guestRegisterPopup" class="popup">
+        <div class="popup-content">
+            <h2>Please Register</h2>
+            <p>You need to register to issue books. Would you like to register now?</p>
+            <button onclick="redirectToRegister()">Register Now</button>
+            <button onclick="closeGuestRegisterPopup()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

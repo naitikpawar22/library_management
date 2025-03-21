@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" id="loginEmailMobile" placeholder="Email or Mobile" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <p>New User? <a href="signup.html">Sign Up</a></p>
+        <p><a class="guest-login" onclick="guestLogin()">Continue as Guest</a></p>
+    </div>
+
+    <script>
+        function login() {
+            let emailMobile = document.getElementById("loginEmailMobile").value;
+            let password = document.getElementById("loginPassword").value;
+
+            // Simulating user check (without a database)
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            let foundUser = users.find(user => 
+                (user.email === emailMobile || user.mobile === emailMobile) && user.password === password
+            );
+
+            if (foundUser) {
+                localStorage.setItem("isGuest", "false"); // User is not a guest
+                window.location.href = "../User_Ui/dashboard.html";  // Redirect to dashboard
+            } else {
+                alert("User not found. Please Sign Up!");
+            }
+        }
+
+        function guestLogin() {
+            alert("Guest Login Successful!");
+            localStorage.setItem("isGuest", "true"); // Set guest flag
+            window.location.href = "../User_Ui/dashboard.html";  // Redirect to dashboard
+        }
+    </script>
+</body>
+</html>

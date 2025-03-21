@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <input type="text" id="adminUsername" placeholder="Username" required>
+        <input type="password" id="adminPassword" placeholder="Password" required>
+        <button onclick="adminLogin()">Login</button>
+
+        <button id="back-button" onclick="window.location.href = 'dashboard.html'">Back to Library</button>
+        
+    </div>
+
+    <script>
+        function adminLogin() {
+            let username = document.getElementById("adminUsername").value;
+            let password = document.getElementById("adminPassword").value;
+
+            // Dummy admin credentials
+            if (username === "admin" && password === "admin123") {
+                alert("Login Successful!");
+                window.location.href = "admin-dashboard.html"; // Redirect to admin panel
+            } else {
+                alert("Invalid credentials. Try again!");
+            }
+        }
+    </script>
+
+</body>
+</html>

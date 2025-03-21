@@ -1,0 +1,230 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Admin Container */
+.admin-container {
+    width: 100%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required for positioning the buttons */
+}
+
+/* Top Buttons Container */
+.top-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Common Button Styles */
+.top-buttons button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s; /* Added transform for click effect */
+}
+
+/* Dashboard Button */
+.dashboard-button {
+    background: #28a745;
+}
+
+.dashboard-button:hover {
+    background: #218838;
+}
+
+.dashboard-button:active {
+    transform: scale(0.95); /* Slightly scale down the button when clicked */
+}
+
+/* Activity Button */
+.activity-button {
+    background: #ff9800; /* Orange color */
+}
+
+.activity-button:hover {
+    background: #e68900; /* Darker orange on hover */
+}
+
+.activity-button:active {
+    transform: scale(0.95); /* Slightly scale down the button when clicked */
+}
+
+/* Heading */
+.admin-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Add Book Section */
+.add-book {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.add-book input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.add-book input:focus {
+    border-color: #0072ff;
+}
+
+.add-book button {
+    padding: 12px;
+    background: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-book button:hover {
+    background: #005bb5;
+}
+
+/* Book List */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.book-card button {
+    padding: 8px 16px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.book-card button:hover {
+    background: #cc0000;
+}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Admin Container */
+.admin-container {
+    width: 100%;
+    max-width: 1200px;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Activity Container */
+.activity-container {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-container h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#activityTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#activityTable th, #activityTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: white;
+}
+
+#activityTable th {
+    background: #333;
+    font-weight: bold;
+}
+
+#activityTable tr:hover {
+    background: #3c3c3c;
+}
+
